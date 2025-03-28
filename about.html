@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="settings-btn.css">
+    <link rel="stylesheet" href="top-line.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <form class="form">
+
+            <p class="title">About</p>
+
+            <p class="Welcome">Willkommen</p>
+
+            <label>Über mich: ------>
+
+                <a class="submit" href="https://github.com/elias-muc09" target="_blank" class="btn btn-link">
+                    GitHub
+                </a>
+            
+            </label>
+
+        </form>
+    </div>
+
+
+    
+    <nav class="top-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="settings.html">Spiel-Einstellungen</a>
+    </nav>
+</body>
+
+
+<script>
+
+
+    function fadeInPage() {
+    document.body.classList.add('fade-in');
+    }
+
+    
+    function handlePageTransitions() {
+    document.addEventListener('click', function(e) {
+        let target = e.target;
+        if (target.tagName === 'A') {
+        e.preventDefault();
+        document.body.classList.remove('fade-in');
+        document.body.classList.add('fade-out');
+        setTimeout(function() {
+            window.location.href = target.href;
+        }, 500);
+        }
+    });
+    }
+
+    
+    document.addEventListener('DOMContentLoaded', function() {
+ 
+    setTimeout(fadeInPage, 100);
+    
+    
+    handlePageTransitions();
+    });
+
+
+  </script>
+
+
+</html>
